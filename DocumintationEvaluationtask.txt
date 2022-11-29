@@ -1,0 +1,29 @@
+In this project I did
+firt I create new repository in GitHub
+then I create new project in e-clips i name it( evaluationtask) 
+I create a 4 classes the first one is ( Api ) for calling the function , the other three classes I write the method 
+and function (definition) only  for ( Consume API,WriteResponse , SearchWord ) .
+
+in the Api class I create one function for the menue ( mainMenue() ) then I write menue for Consume API,WriteResponse ,
+ SearchWord , Exit the system . 
+ I did While loop for the menue to repeat and ask again .
+I create switch cases for the menue .
+the first case for consume API , by object chaining.giving object for the class then call the name of the function.
+the output was [{"id":316,"type":"general","setup":"Why are mummys scared of vacation?","punchline":"They're afraid to unwind."},
+{"id":353,"type":"general","setup":"Why didn’t the orange win the race?","punchline":
+"It ran out of juice."},{"id":99,"type":"general","setup":"Did you hear that the police have 
+a warrant out on a midget psychic ripping people off?","punchline":"It reads \"Small medium at large.\""}
+,{"id":5,"type":"general","setup":"Why can't bicycles stand on their own?","punchline":"They are two tired"},{"id":47,"type":"general",
+"setup":"Don't look at the eclipse through a colander.","punchline":"You'll strain your eyes."},{"id":255,"type":"general",
+"setup":"What is a vampire's favorite fruit?","punchline":"A blood orange."},{"id":53,"type":"general","setup":"How do you make holy water?",
+"punchline":"You boil the hell out of it"},{"id":321,"type":"general","setup":"Why can't you use \"Beef stew\"as a password?",
+"punchline":"Because it's not stroganoff."},{"id":314,"type":"general","setup":"Why are ghosts bad liars?",
+"punchline":"Because you can see right through them!"},
+{"id":126,"type":"general","setup":"How do you get a baby alien to sleep?","punchline":" You rocket."}] 
+
+the second case for WriteResponse , by object chaining.giving object for the class then call the name of the function.
+the third case for SearchWord , by object chaining.giving object for the class then call the name of the function.
+the last case for the end and exit the system.
+
+in class ConsumeApi shows the code for consuming API by adding URL for random api user.
+ 
