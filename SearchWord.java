@@ -29,11 +29,11 @@ public class SearchWord {
         List<String> wordsList=new ArrayList<>();
         String wordsArray[] = new String[n];
         System.out.println("Enter words:");
-        
+       
         
         for(int i=0; i<n; i++)  
         {
-           String wordss=sc.next();
+            String wordss=sc.next();
            wordsList.add(wordss); 
         }
 
@@ -59,15 +59,15 @@ public class SearchWord {
             
         if(count == 1)
         {
-           System.out.println(list + " is unique in file ");
+        	System.out.println(list + " is unique in file ");
         }
         else if (count == 0)
         {
-           System.out.println( "The given word is not present in the file");
+           System.out.println(list+ "  " + "The word is not present in the file");
         }
         else
         {
-           System.out.println("The given word is present in the file more than 1 time");
+           System.out.println(list +"  "+"The word is present in the file "+ count +" times");
         }
         }
           
