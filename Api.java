@@ -64,7 +64,7 @@ public class Api {
 			case 3:
 				
 				SearchWord mySearchWord = new SearchWord();
-				mySearchWord.SearchStringWord();
+				SearchWord.SearchStringWord();
 				
 				break;
 
