@@ -26,9 +26,10 @@ public class Api {
 		System.out.println("\t \t ***Please Choose One Option*** \t \t");
 		System.out.println("\t \t ****************************** \t \t");
 		System.out.println("\t\t 1. Consume API ");
-		System.out.println("\t\t 2. Write File ");
-		System.out.println("\t\t 3. Search words from File ");
-		System.out.println("\t\t 4. Exite ");
+		System.out.println("\t\t 2. Write Text File ");
+		System.out.println("\t\t 3. Write PDF File ");
+		System.out.println("\t\t 4. Search words from File ");
+		System.out.println("\t\t 5. Exite ");
 		System.out.println("\t\t ******************************* \t \t");
 	}
 
@@ -56,19 +57,30 @@ public class Api {
 			case 2:
 
 				WriteResponse myWriteResponse = new WriteResponse();
-				myWriteResponse .WriteRead();
+				myWriteResponse .WriteReadTextFile();
 				
 
 				break;
-
+				
 			case 3:
+				PdfFile myPdfFile = new PdfFile();
+				myPdfFile .WriteReadPdfFile();
+				
+				
+				break;
+				
+				
+				
+			case 4:
 				
 				SearchWord mySearchWord = new SearchWord();
 				SearchWord.SearchStringWord();
 				
 				break;
+				
+				
 
-			case 4:
+			case 5:
 				System.out.println(" See You Soon ");
 				System.exit(0);
 				

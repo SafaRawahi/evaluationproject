@@ -1,6 +1,7 @@
 package evaluationtask;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,11 +11,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
-public class WriteResponse {
-	
-	
-	
-	public void WriteReadTextFile() throws IOException, InterruptedException {
+public class PdfFile {
+	public void WriteReadPdfFile() throws IOException, InterruptedException {
+		
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder()
 				.uri(URI.create("https://official-joke-api.appspot.com/jokes/ten")).build();
@@ -24,7 +23,7 @@ public class WriteResponse {
       // System.out.println(Myfile1);
 		try {
 			FileWriter writerFile = new FileWriter(
-					"C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.txt");
+					"C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.pdf");
 			writerFile.write(Myfile1);
 			writerFile.close();
 			
@@ -33,11 +32,11 @@ public class WriteResponse {
 			e.printStackTrace();
 		}
 		System.out.println("**************************************************");
-		System.out.println("****** JSON File Was Created Successfully ********");
+		System.out.println("****** PDF File Was Created Successfully *********");
 		System.out.println("**************************************************");
 
 		try {
-			File myObj = new File("C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.txt");
+			File myObj = new File("C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.pdf");
 			Scanner myReader = new Scanner(myObj);
 
 			while (myReader.hasNextLine()) {
@@ -54,4 +53,10 @@ public class WriteResponse {
 		
 	}
 
-}
+	
+		
+	}
+	
+	
+
+

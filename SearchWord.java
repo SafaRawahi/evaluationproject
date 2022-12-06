@@ -15,17 +15,33 @@ import java.util.Scanner;
 
 
 public class SearchWord {
-	
-	public static void SearchStringWord() throws IOException {
-	
+
+		public static void SearchStringWord() throws IOException {
+			boolean isExit2 = true;
+			boolean isExitSmallMenue = true;
+			
+			Scanner sc = new Scanner(System.in);
+			
+			
+			while(isExit2) {
+		System.out.println(" ********************************* ");
+		System.out.println(" !!!! Please Choose One Option !!!!  ");
+		System.out.println(" 1. Search Words From Text File ");
+		System.out.println(" 2. Search Words From PDF File ");
+		System.out.println(" 3. Back To The Main Menue ");
 		
-		Scanner sc = new Scanner(System.in);
-        
+		
+		int option2 = sc.nextInt();
+		
+		switch (option2) {
+
+		case 1:
+		// Scanner sc = new Scanner(System.in);
         String[] words=null;  
      
-        
         System.out.println("Enter the number of words:");
         Integer n = sc.nextInt();
+        
         List<String> wordsList=new ArrayList<>();
         String wordsArray[] = new String[n];
         System.out.println("Enter words:");
@@ -39,12 +55,12 @@ public class SearchWord {
 
          System.out.println( wordsList);
       for(String list:  wordsList) {
-    	   FileReader fr = new FileReader("C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.txt");  
-           BufferedReader br = new BufferedReader(fr);
+    	   FileReader fileread = new FileReader("C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.txt");  
+           BufferedReader bufferread = new BufferedReader(fileread );
            
            String s;     
            int count=0;   //Intialize the word to zero
-            while((s=br.readLine())!=null)   //Reading Content from the file
+            while((s=bufferread.readLine())!=null)   //Reading Content from the file
         {
           {
            words=s.split(" ");  //Split the word using space
@@ -61,6 +77,7 @@ public class SearchWord {
         {
         	System.out.println(list + " is unique in file ");
         }
+        
         else if (count == 0)
         {
            System.out.println(list+ "  " + "The word is not present in the file");
@@ -72,10 +89,42 @@ public class SearchWord {
         }
           
            }
-           fr.close();
+            fileread .close();
       }    
-	}
-	}
+	
+		break;
+		
+		
+		
+		case 2 :
+		
+			
+			
+		break;
+		
+		
+		case 3 :
+			//Back To The Main Menue 
+			
+			isExitSmallMenue = false;
+			
+			break;
+		}
+		
+		} while (isExitSmallMenue);
+		
+	//	Integer n=sc.nextInt();
+//		if(n==1) {
+//			isExit2=true;
+//		}
+//		else{
+//			isExit2=false;
+		
+	//	isExit2 = false;
+		}}
+	
+	
+
 
 
 
