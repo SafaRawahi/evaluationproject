@@ -16,33 +16,37 @@ public class PdfFile {
 		
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder()
-				.uri(URI.create("https://official-joke-api.appspot.com/jokes/ten")).build();
+				.uri(URI.create("https://randomuser.me/api/")).build();
 		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
 		String Myfile1 = response.body();
       // System.out.println(Myfile1);
+		
 		try {
 			FileWriter writerFile = new FileWriter(
-					"C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.pdf");
+					"C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile1.pdf");
 			writerFile.write(Myfile1);
 			writerFile.close();
 			
 		} 
+		
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 		System.out.println("**************************************************");
 		System.out.println("****** PDF File Was Created Successfully *********");
 		System.out.println("**************************************************");
 
 		try {
-			File myObj = new File("C:\\Users\\user017\\Desktop\\evaluationtask\\evaluationfile.pdf");
+			File myObj = new File("C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile1.pdf");
 			Scanner myReader = new Scanner(myObj);
 
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
 				System.out.println(data);
 			}
+			
 			myReader.close();
 		} 
 		
@@ -50,11 +54,8 @@ public class PdfFile {
 			e.printStackTrace();
 		}
 
-		
 	}
 
-	
-		
 	}
 	
 	

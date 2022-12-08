@@ -23,7 +23,7 @@ public class SearchWord {
 			Scanner sc = new Scanner(System.in);
 			
 			
-			while(isExit2) {
+			while(isExitSmallMenue) {
 		System.out.println(" ********************************* ");
 		System.out.println(" !!!! Please Choose One Option !!!!  ");
 		System.out.println(" 1. Search Words From Text File ");
@@ -98,14 +98,68 @@ public class SearchWord {
 		
 		case 2 :
 		
-			
+			// Scanner sc = new Scanner(System.in);
+	        String[] wordss=null;  
+	     
+	        System.out.println("Enter the number of words:");
+	        Integer n1 = sc.nextInt();
+	        
+	        List<String> wordssList=new ArrayList<>();
+	        String wordssArray[] = new String[n1];
+	        System.out.println("Enter words:");
+	       
+	        
+	        for(int i=0; i<n1; i++)  
+	        {
+	            String wordss1=sc.next();
+	           wordssList.add(wordss1); 
+	        }
+
+	         System.out.println( wordssList);
+	      for(String list:  wordssList) {
+	    	   FileReader fileread = new FileReader("C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile1.pdf");  
+	           BufferedReader bufferread = new BufferedReader(fileread );
+	           
+	           String s;     
+	           int count=0;   //Intialize the word to zero
+	            while((s=bufferread.readLine())!=null)   //Reading Content from the file
+	        {
+	          {
+	           words=s.split(" ");  //Split the word using space
+	           
+	            for (String word : words) 
+	            {
+	                   if (word.contains(list))   //Search for the given word
+	                   {
+	                     count++;    //If Present increase the count by one
+	                   }
+	            }
+	            
+	        if(count == 1)
+	        {
+	        	System.out.println(list + " is unique in file ");
+	        }
+	        
+	        else if (count == 0)
+	        {
+	           System.out.println(list+ "  " + "The word is not present in the file");
+	        }
+	        else
+	        {
+	           System.out.println(list +"  "+"The word is present in the file "+ count +" times");
+	        }
+	        }
+	          
+	           }
+	            fileread .close();
+	      }
 			
 		break;
 		
 		
 		case 3 :
 			//Back To The Main Menue 
-			
+		
 			isExitSmallMenue = false;
 			
 			break;
@@ -117,10 +171,11 @@ public class SearchWord {
 //		if(n==1) {
 //			isExit2=true;
 //		}
-//		else{
+
 //			isExit2=false;
 		
 	//	isExit2 = false;
+		
 		}}
 	
 	
