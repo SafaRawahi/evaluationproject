@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -91,6 +92,7 @@ public class SearchWord {
            }
             fileread .close();
       }    
+      
 	
 		break;
 		
@@ -110,21 +112,20 @@ public class SearchWord {
 	       
 	        
 	        for(int i=0; i<n1; i++)  
-	        {
+	        { 
 	            String wordss1=sc.next();
 	           wordssList.add(wordss1); 
 	        }
 
 	         System.out.println( wordssList);
 	      for(String list:  wordssList) {
-	    	   FileReader fileread = new FileReader("C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile1.pdf");  
+	    	   FileReader fileread = new FileReader("C:\\Users\\user017\\Desktop\\newevaluationfile1.pdf");  
 	           BufferedReader bufferread = new BufferedReader(fileread );
 	           
 	           String s;     
 	           int count=0;   //Intialize the word to zero
-	            while((s=bufferread.readLine())!=null)   //Reading Content from the file
-	        {
-	          {
+	            while((s=bufferread.readLine())!=null){
+	            	
 	           words=s.split(" ");  //Split the word using space
 	           
 	            for (String word : words) 
@@ -138,22 +139,26 @@ public class SearchWord {
 	        if(count == 1)
 	        {
 	        	System.out.println(list + " is unique in file ");
+	        	
 	        }
 	        
 	        else if (count == 0)
 	        {
 	           System.out.println(list+ "  " + "The word is not present in the file");
+	          
 	        }
 	        else
 	        {
 	           System.out.println(list +"  "+"The word is present in the file "+ count +" times");
+	           Path p= Files.copy(Paths.get("C:\\Users\\user017\\Desktop\\newevaluationfile1.pdf"),Paths.get("C:\\Users\\user011\\Desktop\\newfile\\newevaluationfile2.pdf"));
+               if(p !=null) {
+              System.out.println("File is transfer Successfuly");
+             }
 	        }
-	        }
-	          
-	           }
+	        }  
 	            fileread .close();
-	      }
-			
+		}
+		
 		break;
 		
 		
