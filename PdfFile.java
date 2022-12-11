@@ -24,7 +24,7 @@ public class PdfFile {
 		
 		try {
 			FileWriter writerFile = new FileWriter(
-					"C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile1.pdf");
+					"C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile22.pdf");
 			writerFile.write(Myfile1);
 			writerFile.close();
 			
@@ -39,7 +39,7 @@ public class PdfFile {
 		System.out.println("**************************************************");
 
 		try {
-			File myObj = new File("C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile1.pdf");
+			File myObj = new File("C:\\Users\\user017\\Desktop\\evaluationtask\\newevaluationfile22.pdf");
 			Scanner myReader = new Scanner(myObj);
 
 			while (myReader.hasNextLine()) {
